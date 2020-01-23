@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">RT_Project</string>
+    <string name="top_rated">Top Rated</string>
+    <string name="most_viewed">Most Viewed</string>
+    <string name="recents">Recents</string>
 </resources>
