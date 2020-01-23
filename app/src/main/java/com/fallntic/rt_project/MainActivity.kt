@@ -19,9 +19,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         bottomNavigationView = findViewById(R.id.bottom_nav)
-
         bottomNavigationView.setOnNavigationItemSelectedListener(itemListener)
 
+        supportFragmentManager.beginTransaction().replace(R.id.container,TopRated()).commit()
     }
 
     private var itemListener = BottomNavigationView.OnNavigationItemSelectedListener {menuItem ->
