@@ -3,4 +3,7 @@
     <string name="top_rated">Top Rated</string>
     <string name="most_viewed">Most Viewed</string>
     <string name="recents">Recents</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
