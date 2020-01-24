@@ -21,6 +21,7 @@ class Recent : Fragment() {
     lateinit var generate: TextView
     lateinit var numbers : TextView
     lateinit var results : TextView
+    var num : Int = 0
 
     val random = List(10){Random.nextInt(1,100)}
 
@@ -47,38 +48,40 @@ class Recent : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-
+        var numGenerate: Boolean = false
         var strnum = random.toString()
         strnum = strnum.removeRange(0,1)
         strnum = strnum.removeRange(strnum.length-1,strnum.length)
 
         generate.setOnClickListener {
             numbers.text = strnum
-            results.text = strnum
-
+            results.text = calcMod(num)
+            numGenerate = true
         }
+
 
         numberPicker.setOnValueChangedListener { numberPicker, i, i2 ->
-            val num = numberPicker.value
-            var str : String = ""
-
-            for (i in random){
-                if (i % num == 0){
-                    str = str + i + ", "
-
-                }
+            num = numberPicker.value
+            if (numGenerate) {
+                results.text = calcMod(num)
             }
-            if(str.length > 1)
-                str = str.removeRange(str.length-2,str.length)
-            else
-                str = ""
-
-            results.text = str
         }
-
-
-
     }
 
+    fun calcMod(num:Int):String{
+        var str: String = ""
+
+        for (i in random) {
+            if (i % num == 0) {
+                str = str + i + ", "
+            }
+        }
+        if (str.length > 1)
+            str = str.removeRange(str.length - 2, str.length)
+        else
+            str = ""
+
+        return str
+    }
 
 }
