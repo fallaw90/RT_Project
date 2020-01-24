@@ -70,7 +70,6 @@ class TopRated : Fragment() {
                 else{
                     score2++
                 }
-
                 textView1.text = score1.toString()
                 textView2.text = score2.toString()
             }
@@ -81,7 +80,7 @@ class TopRated : Fragment() {
         val card_id = resources.getIdentifier(card_name, "drawable", context?.packageName)
         Glide.with(this)
             .load(card_id)
-            .centerInside()
             .into(imageView)
+
     }
 }
