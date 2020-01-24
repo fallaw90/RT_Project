@@ -1,75 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragments.MostViewed">
 
     <!-- TODO: Update blank fragment layout -->
     <ScrollView
+        android:layout_marginTop="100dp"
         android:layout_width="match_parent"
-        android:background="@color/colorGrey"
-        android:layout_height="400dp">
+        android:layout_height="400dp"
+        android:background="@color/colorGrey">
 
         <LinearLayout
-            android:layout_width="150dp"
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:visibility="gone"
+                android:layout_gravity="center"/>
 
             <TextView
                 android:id="@+id/text1"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
                 android:background="@color/colorBlue"/>
             <TextView
                 android:id="@+id/text2"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
                 android:background="@color/colorGreen"/>
             <TextView
                 android:id="@+id/text3"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
                 android:background="@color/colorRed"/>
             <TextView
                 android:id="@+id/text4"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
                 android:background="@color/colorBlue"/>
             <TextView
                 android:id="@+id/text5"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
                 android:background="@color/colorRed"/>
             <TextView
                 android:id="@+id/text6"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
                 android:background="@color/colorGreen"/>
             <TextView
                 android:id="@+id/text7"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
                 android:background="@color/colorRed"/>
             <TextView
                 android:id="@+id/text8"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
                 android:background="@color/colorGreen"/>
             <TextView
                 android:id="@+id/text9"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="200dp"
                 android:background="@color/colorBlue"/>
 
         </LinearLayout>

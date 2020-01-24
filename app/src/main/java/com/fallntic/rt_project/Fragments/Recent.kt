@@ -21,7 +21,7 @@ class Recent : Fragment() {
     lateinit var generate: TextView
     lateinit var numbers : TextView
     lateinit var results : TextView
-    var num : Int = 0
+    var num : Int = 1
 
     val random = List(10){Random.nextInt(1,100)}
 
